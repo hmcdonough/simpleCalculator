@@ -12,7 +12,7 @@ func input() -> String {
     let keyboard = NSFileHandle.fileHandleWithStandardInput()
     let inputData = keyboard.availableData
     let result = NSString(data: inputData, encoding:NSUTF8StringEncoding) as! String
-    return result.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())//(NSCharacterSet.whitespaceAndN, ewlineCharacterSet())
+    return result.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
 }
 
 func convert(incoming:String) -> Double {
@@ -29,10 +29,8 @@ func factorial(incoming:Double) -> Double {
         return incoming * factorial(incoming - 1)
     }
 }
-//if array greater than 2 - avg
-//else - read in another number, do normal switch
 
-let firstInput = input()//convert(input())
+let firstInput = input()
 var numbers = firstInput.componentsSeparatedByString(" ")
 
 let calc = input()
